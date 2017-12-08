@@ -1,0 +1,9 @@
+{
+  "name": "n2n-vue",
+  "version": "1.0.0",
+  "description": "vue stuff",
+  "main": "index.js",
+  "repository": "https://github.com/oreoluwade/n2n-vue.git",
+  "author": "oreoluwade <oreoluwade@gmail.com>",
+  "license": "MIT"
+}
