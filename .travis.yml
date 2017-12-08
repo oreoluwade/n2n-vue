@@ -1,2 +1,5 @@
 language: nodejs
 nodejs: 'stable'
+
+after_success:
+  - coveralls < coverage/lcov.info
