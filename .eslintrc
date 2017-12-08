@@ -8,7 +8,8 @@
     "import/extensions": [".js"]
   },
   "globals": {
-    "expect": true
+    "expect": true,
+    "Vue": true
   },
   "env": {
     "node": true,
