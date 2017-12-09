@@ -2,51 +2,29 @@
 
 const app = new Vue({
   el: '#app',
-  data: {
-    message: 'Hello Vue!',
-  },
-});
 
-const app2 = new Vue({
-  el: '#app-2',
   data: {
-    message: `You loaded this page on ${new Date().toLocaleString()}`,
-  },
-});
-
-const app3 = new Vue({
-  el: '#app-3',
-  data: {
-    seen: true,
-  },
-});
-
-const app4 = new Vue({
-  el: '#app-4',
-  data: {
-    todos: [
-      { text: 'Learn JavaScript' },
-      { text: 'Learn Vue' },
-      { text: 'Build something awesome' },
+    tasks: [
+      { description: 'Study vue', completed: false },
+      { description: 'Create PT stories', completed: false },
+      { description: 'Read Bible', completed: false },
+      { description: 'Write Poem', completed: false },
+      { description: 'Continue a novel', completed: true },
+      { description: 'Watch agents of shield', completed: true },
+      { description: 'Play scrabble', completed: false },
+      { description: 'Go to Ikeja', completed: false },
     ],
   },
-});
 
-const app5 = new Vue({
-  el: '#app-5',
-  data: {
-    message: 'Hello Vue.js!',
-  },
   methods: {
-    reverseMessage() {
-      this.message = this.message.toUpperCase().split('').reverse().join('');
+
+  },
+
+  computed: {
+    incomplete() {
+      return this.tasks.filter(element => !element.completed);
     },
   },
+
 });
 
-const app6 = new Vue({
-  el: '#app-6',
-  data: {
-    message: 'Hello Vue!',
-  },
-});
