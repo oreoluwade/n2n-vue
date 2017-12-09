@@ -2,51 +2,21 @@
 
 const app = new Vue({
   el: '#app',
-  data: {
-    message: 'Hello Vue!',
-  },
-});
 
-const app2 = new Vue({
-  el: '#app-2',
   data: {
-    message: `You loaded this page on ${new Date().toLocaleString()}`,
+    newName: '',
+    names: ['ore', 'ayo', 'ade'],
+    title: 'Type a new Name in the input box, then click this button to add a new name to the list',
   },
-});
 
-const app3 = new Vue({
-  el: '#app-3',
-  data: {
-    seen: true,
-  },
-});
-
-const app4 = new Vue({
-  el: '#app-4',
-  data: {
-    todos: [
-      { text: 'Learn JavaScript' },
-      { text: 'Learn Vue' },
-      { text: 'Build something awesome' },
-    ],
-  },
-});
-
-const app5 = new Vue({
-  el: '#app-5',
-  data: {
-    message: 'Hello Vue.js!',
-  },
   methods: {
-    reverseMessage() {
-      this.message = this.message.toUpperCase().split('').reverse().join('');
+    addName() {
+      if (!this.names.includes(this.newName)) {
+        this.names.push(this.newName);
+        this.newName = '';
+      }
     },
   },
+
 });
 
-const app6 = new Vue({
-  el: '#app-6',
-  data: {
-    message: 'Hello Vue!',
-  },
-});
