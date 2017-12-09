@@ -1,8 +1,7 @@
 /* eslint-disable no-unused-vars */
+import Vue from 'vue';
 
 const app = new Vue({
-  el: '#app',
-
   data: {
     tasks: [
       { description: 'Study vue', completed: false },
@@ -16,10 +15,6 @@ const app = new Vue({
     ],
   },
 
-  methods: {
-
-  },
-
   computed: {
     incomplete() {
       return this.tasks.filter(element => !element.completed);
@@ -27,4 +22,6 @@ const app = new Vue({
   },
 
 });
+
+export default app;
 
