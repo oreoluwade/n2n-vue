@@ -9,11 +9,21 @@
 <body>
 
   <div id="app">
+    <h1>All Tasks</h1>
     <ol>
-      <li v-for="name in names">{{ name }}</li>
+      <li
+        v-for="task in tasks"
+        v-text="task.description"
+      />
     </ol>
-    <input v-model="newName">
-    <button @click="addName" :title="title">Add Item</button>
+
+    <h1>Incomplete Tasks</h1>
+    <ol>
+      <li
+        v-for="item in incomplete"
+        v-text="item.description"
+      />
+    </ol>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>

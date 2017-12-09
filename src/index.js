@@ -4,17 +4,25 @@ const app = new Vue({
   el: '#app',
 
   data: {
-    newName: '',
-    names: ['ore', 'ayo', 'ade'],
-    title: 'Type a new Name in the input box, then click this button to add a new name to the list',
+    tasks: [
+      { description: 'Study vue', completed: false },
+      { description: 'Create PT stories', completed: false },
+      { description: 'Read Bible', completed: false },
+      { description: 'Write Poem', completed: false },
+      { description: 'Continue a novel', completed: true },
+      { description: 'Watch agents of shield', completed: true },
+      { description: 'Play scrabble', completed: false },
+      { description: 'Go to Ikeja', completed: false },
+    ],
   },
 
   methods: {
-    addName() {
-      if (!this.names.includes(this.newName)) {
-        this.names.push(this.newName);
-        this.newName = '';
-      }
+
+  },
+
+  computed: {
+    incomplete() {
+      return this.tasks.filter(element => !element.completed);
     },
   },
 
